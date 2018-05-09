@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <assert.h>
 #include "Prim.h"
 #include "generator.h"
 #include "menu.h"
@@ -17,9 +19,10 @@ int main(int argc, char const *argv[]) {
     draw_menu_choose_read_mode();
     int read_mode_chose;
     scanf("%d", &read_mode_chose);
+    assert(read_mode_chose >= 1 && read_mode_chose <=2);
     switch (read_mode_chose) {
         case 1 : {
-            srand((unsigned) time(NULL));
+            srand((unsigned)time(NULL));
             number_nodes = generate_number(MAX);
             readed_graph = (int **)calloc( number_nodes, sizeof(int *) );
             matrix_constructor(readed_graph, number_nodes);
@@ -44,6 +47,7 @@ int main(int argc, char const *argv[]) {
     draw_menu_choose_algorithm();
     int alg_choose;
     scanf("%d", &alg_choose);
+    assert(alg_choose >= 1 && alg_choose <=2);
     switch (alg_choose) {
         case 1 : {
             break;

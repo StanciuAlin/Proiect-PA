@@ -33,7 +33,7 @@ int init_read_file() {
 void Read_data_matrix( int **readed_graph, int number_nodes ) {
 
     int iterator_i, iterator_j;
-    
+
     for (iterator_i = 0; iterator_i < number_nodes; iterator_i++) {
         for (iterator_j = 0; iterator_j < number_nodes; iterator_j++) {
             fscanf(read_spanning_tree, "%d", &readed_graph[iterator_i][iterator_j]);
@@ -119,14 +119,14 @@ int prims( int **readed_graph, int number_nodes ) {
     int cost[MAX][MAX];
     int min_distance;
     int first_adiacent_node, second_adiacent_node;
-    int iterator_i, iterator_j;
+    int iterator_i;
     int no_of_edges;
     int min_cost;
     int *visited = (int *)calloc(number_nodes, sizeof(int));
     int *distance = (int *)calloc(number_nodes, sizeof(int));
     int *from = (int *)calloc(number_nodes, sizeof(int));
     //create cost[][] matrix,spanning[][]
-    create_cost_and_spanning_matrix( cost );
+    create_cost_and_spanning_matrix( readed_graph, cost, number_nodes );
 
     //initialise visited[],distance[] and from[]
     distance[0] = 0;

@@ -14,5 +14,6 @@ int find_adiacent_node_minim_edge( int visited_nodes[MAX], int distance[MAX], in
 void update_distance_array( int visited_nodes[MAX], int cost[MAX][MAX], int distance[MAX], int from[MAX], int adiacent_node, int number_nodes );
 int prims( int **readed_graph, int number_nodes );
 int read_number_nodes();
+int init_read_file();
 
 #endif
