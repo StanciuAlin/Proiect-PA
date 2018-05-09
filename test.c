@@ -1,24 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "generator.h"
 
-int main() {
-    int rand_number;
+int main(int argc, char const *argv[]) {
+
+    int **readed_graph, number_nodes;
     int iterator_i;
     int iterator_j;
-    int iterator_delay;
-    rand_number = generate_number(7);
-
-    for( iterator_i = 0; iterator_i < rand_number; iterator_i++ ) {
-        for( iterator_j = 0; iterator_j < rand_number; iterator_j++ ) {
-            int aux = generate_number(50);
-            printf("%d ", aux);
-            for (iterator_delay = 1; iterator_delay <= 10000; iterator_delay++)
-                {}
-        }
-        printf("\n");
-    }
-
-    //printf("%d\n",rand_number);
+    //number_nodes = (int *)malloc( sizeof(int ) );
+    srand( time(NULL) );
+    number_nodes = generate_value(30);
+    printf("%d\n", number_nodes);
+    readed_graph = (int **)calloc( number_nodes, sizeof(int *) );
+    matrix_constructor(readed_graph, number_nodes);
+    set_distances(readed_graph, number_nodes);
+    get_distances(readed_graph, number_nodes);
     return 0;
 }
