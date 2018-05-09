@@ -29,14 +29,14 @@ int main(int argc, char const *argv[]) {
         }
         case 2 : {
             int check_file;
-            //check_file = init_read_file();
+            check_file = init_read_file();
             if (check_file == -1) {
                 printf("File do not work!!!\n");
             }
-            //number_nodes = read_number_nodes();
+            number_nodes = read_number_nodes();
             readed_graph = (int **)calloc( number_nodes, sizeof(int *) );
             matrix_constructor(readed_graph, number_nodes);
-            //Read_data_matrix(readed_graph, number_nodes);
+            Read_data_matrix(readed_graph, number_nodes);
             break;
         }
     }
@@ -49,8 +49,8 @@ int main(int argc, char const *argv[]) {
             break;
         }
         case 2 : {
-            //total_cost = start(readed_graph, number_nodes);
-            //Write_minimum_spanning_tree_Prim(total_cost, number_nodes);
+            total_cost = start(readed_graph, number_nodes);
+            Write_minimum_spanning_tree_Prim(total_cost, number_nodes);
             printf("Open output file and read the answer of the problem!\n");
             break;
         }

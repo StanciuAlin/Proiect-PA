@@ -28,6 +28,7 @@ void set_distances(int **readed_graph, int number_nodes) {
     }
 
 }
+
 void get_distances(int **readed_graph, int number_nodes) {
 
     int iterator_i;
