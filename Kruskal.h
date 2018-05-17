@@ -11,8 +11,8 @@ struct Edge
     int weight;
 };
 
-FILE *read_spanning_tree;
-FILE *write_spanning_tree;
+FILE *read_spanning_tree; //input file
+FILE *write_spanning_tree; //output file
 
 struct Edge Graph[N_MAX_EDGES];
 int Partial_tree[N_MAX_VERTICES];
@@ -20,8 +20,9 @@ int Connected_components[N_MAX_VERTICES];
 int no_vertices_tree;
 int no_edges_tree;
 
-void Read_data();
-void Write_minimum_spanning_tree();
+void Read_data( int **matrix_distance, int number_nodes, int read_mode );
+void Write_minimum_spanning_tree(int **matrix_distance, int number_nodes);
 void Sort_edges(int left, int right);
+void start_K( int **matrix_distance, int number_nodes, int read_mode );
 
 #endif

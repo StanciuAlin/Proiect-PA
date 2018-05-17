@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=spanning_tree_Prim.c Minimum_spanning_tree.c menu.c generator.c
+SOURCES=spanning_tree_Prim.c Minimum_spanning_tree.c menu.c generator.c spanning_tree_Kruskal.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=Minimum_spanning_tree
 
