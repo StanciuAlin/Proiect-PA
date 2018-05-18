@@ -27,6 +27,17 @@ void set_distances(int **readed_graph, int number_nodes) {
             }
         }
     }
+    /*
+    //  this part make a rare graph
+    get_distances(readed_graph, number_nodes);
+    printf("\n");
+    for (iterator_i = 0; iterator_i < number_nodes; iterator_i++) {
+        for (iterator_j = iterator_i + 1; iterator_j < number_nodes; iterator_j++) {
+            if (readed_graph[iterator_i][iterator_j]) { //test if exist edge
+                readed_graph[iterator_i][iterator_j] = readed_graph[iterator_j][iterator_i] = generate_number(MAX_VALUE_GEN); //assign random value (distance in graph)
+            }
+        }
+    }*/
 
 }
 
