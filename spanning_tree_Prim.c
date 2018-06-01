@@ -15,7 +15,7 @@
 int start(int **readed_graph, int number_nodes) {
 
     int total_cost; ///retain the total cost of minimum spanning tree
-
+    
     total_cost=prims( readed_graph, number_nodes );
 
     return total_cost; ///returns cost

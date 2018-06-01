@@ -9,7 +9,7 @@
 */
 #ifndef PRIM_H
 #define PRIM_H
-#define MAX 10
+#define MAX 100
 #define INF 10000
 
 int spanning[MAX][MAX];

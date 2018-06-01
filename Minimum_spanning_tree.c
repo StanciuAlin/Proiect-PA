@@ -61,29 +61,45 @@ int main(int argc, char const *argv[]) {
             draw_menu_choose_read_mode(); ///draw menu for choose read mode
             scanf("%d", &read_mode_chose); ///read what date will use
             assert(read_mode_chose >= 1 && read_mode_chose <=2); ///check to insert only 1 or 2
+            printf("1\n");
             switch (read_mode_chose) {
                 case 1 : { ///random mode is selected
                     srand((unsigned)time(NULL));
+                    printf("2\n");
                     number_nodes = generate_number(MAX); ///generate number of nodes
+                    printf("3\n");
                     readed_graph = (int **)calloc( number_nodes, sizeof(int *) ); ///allocate memory for matrix distances
+                    printf("4\n");
                     matrix_constructor(readed_graph, number_nodes);
+                    printf("5\n");
                     set_distances(readed_graph, number_nodes); ///set values for matrix distances
+                    printf("6\n");
                     total_cost = start(readed_graph, number_nodes); ///compute the minimum spanning tree cost
+                    printf("7\n");
                     Write_minimum_spanning_tree_Prim(total_cost, number_nodes); ///write the minimum spanning tree
+                    printf("8\n");
                     printf("Open output file and read the answer of the problem with random values!\n"); ///print a message
                     break;
                 }
                 case 2 : { ///read from file mode is selected
                     check_file = init_read_file(); ///check if input file exist
+                    printf("9\n");
                     if (check_file == -1) {
                         printf("File do not work!!!\n"); ///print an error message
                     }
+                    printf("10\n");
                     number_nodes = read_number_nodes(); ///read number of nodes
+                    printf("11\n");
                     readed_graph = (int **)calloc( number_nodes, sizeof(int *) ); ///allocate memory for matrix distances
+                    printf("12\n");
                     matrix_constructor(readed_graph, number_nodes);
+                    printf("13\n");
                     Read_data_matrix(readed_graph, number_nodes); ///read matrix distances
+                    printf("14\n");
                     total_cost = start(readed_graph, number_nodes); ///compute the minimum spanning tree cost
+                    printf("15\n");
                     Write_minimum_spanning_tree_Prim(total_cost, number_nodes); ///write the minimum spanning tree
+                    printf("16\n");
                     printf("Open output file and read the answer of the problem with values from input file!\n"); ///print a message
                     break;
                 }
