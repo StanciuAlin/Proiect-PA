@@ -1,3 +1,6 @@
-======= Minimum spanning tree - Kruskal algorithm =======
-		[1 2] -> cost=3
-	Total cost of spanning tree = 3
+======= Minimum spanning tree - Prim algorithm =======
+		[1 2] -> cost=2;
+		[1 4] -> cost=6;
+		[2 3] -> cost=3;
+		[2 5] -> cost=5;
+	Total cost of spanning tree = 16

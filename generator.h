@@ -1,3 +1,12 @@
+/**
+* @file generator.h
+* @brief this header file will contain all required
+* definitions and basic utilities functions.
+*
+* @author Stanciu Alin Marian
+*
+* @date 6/1/2018
+*/
 #ifndef GENERATOR_H
 #define GENERATOR_H
 #ifndef MAX_VALUE_GEN

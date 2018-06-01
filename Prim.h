@@ -1,3 +1,12 @@
+/**
+* @file Prim.h
+* @brief this header file will contain all required
+* definitions and basic utilities functions.
+*
+* @author Stanciu Alin Marian
+*
+* @date 6/1/2018
+*/
 #ifndef PRIM_H
 #define PRIM_H
 #define MAX 10

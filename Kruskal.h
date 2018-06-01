@@ -1,3 +1,12 @@
+/**
+* @file Kruskal.h
+* @brief this header file will contain all required
+* definitions and basic utilities functions.
+*
+* @author Stanciu Alin Marian
+*
+* @date 6/1/2018
+*/
 #ifndef KRUSKAL_H
 #define KRUSKAL_H
 
@@ -11,8 +20,8 @@ struct Edge
     int weight;
 };
 
-FILE *read_spanning_tree; //input file
-FILE *write_spanning_tree; //output file
+FILE *read_spanning_tree; ///input file
+FILE *write_spanning_tree; ///output file
 
 struct Edge Graph[N_MAX_EDGES];
 int Partial_tree[N_MAX_VERTICES];

@@ -1,3 +1,12 @@
+/**
+* @file menu.h
+* @brief this header file will contain all required
+* definitions and basic utilities functions.
+*
+* @author Stanciu Alin Marian
+*
+* @date 6/1/2018
+*/
 #ifndef MENU_H
 #define MENU_H
 
