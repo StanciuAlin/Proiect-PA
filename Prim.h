@@ -1,7 +1,7 @@
 /**
 * @file Prim.h
 * @brief this header file will contain all required
-* definitions and basic utilities functions.
+* definitions and basic utilities functions for Prim algorithm.
 *
 * @author Stanciu Alin Marian
 *
@@ -9,7 +9,7 @@
 */
 #ifndef PRIM_H
 #define PRIM_H
-#define MAX 10
+#define MAX 1000
 #define INF 10000
 
 int spanning[MAX][MAX];

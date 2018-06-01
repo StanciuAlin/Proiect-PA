@@ -6,7 +6,7 @@
 /**
 * This method will be used to read or construct matrix distance. The selection is made by read mode variable that has two values - 1 for read from file or 2 for construct randomly the matrix distances
 * @author Stanciu Alin Marian
-* @param matrix_distance - retain the distances from every node to adjacent nodes
+* @param **matrix_distance - retain the distances from every node to adjacent nodes
 * @param number_nodes - number of nodes in graph
 * @param read_mode - has two possible values 1 - read distances from file or 2 - generate distances
 * @return - void type and has no returned values
@@ -75,7 +75,7 @@ void Read_data( int **matrix_distance, int number_nodes, int read_mode ) {
 /**
 * This method will be used to write in output file the minimum spanning tree solved with Kruskal algorithm
 * @author Stanciu Alin Marian
-* @param matrix_distance - retain the distances from every node to adjacent nodes
+* @param **matrix_distance - retain the distances from every node to adjacent nodes
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018
@@ -138,7 +138,7 @@ void Sort_edges( int left, int right) {
 /**
 * This method will be the starting point of the solution
 * @author Stanciu Alin Marian
-* @param matrix_distance - retain the distances from every node to adjacent nodes
+* @param **matrix_distance - retain the distances from every node to adjacent nodes
 * @param number_nodes - number of nodes in graph
 * @param read_mode - has two possible values 1 - read distances from file or 2 - generate distances
 * @return - void type and has no returned values

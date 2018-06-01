@@ -17,7 +17,7 @@ int generate_number( int max_value ) {
 /**
 * This method will be used to allocate memory for a matrix that will retain all distances in graph
 * @author Stanciu Alin Marian
-* @param readed_graph - upcoming matrix with distances from each node to its adjacent ones.
+* @param **readed_graph - upcoming matrix with distances from each node to its adjacent ones.
 * @param number_nodes - upcoming number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018
@@ -34,7 +34,7 @@ void matrix_constructor( int **readed_graph, int number_nodes ) {
 /**
 * This method will be used to set random distances in matrix
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones.
+* @param **readed_graph - matrix with distances from each node to its adjacent ones.
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018
@@ -56,7 +56,7 @@ void set_distances(int **readed_graph, int number_nodes) {
 /**
 * This method will be used to print matrix of distances generated randomly
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones.
+* @param **readed_graph - matrix with distances from each node to its adjacent ones.
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018

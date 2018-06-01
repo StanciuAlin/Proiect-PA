@@ -1,7 +1,7 @@
 /**
 * @file menu.h
 * @brief this header file will contain all required
-* definitions and basic utilities functions.
+* definitions and basic utilities functions to draw menu
 *
 * @author Stanciu Alin Marian
 *

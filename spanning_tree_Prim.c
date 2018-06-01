@@ -7,7 +7,7 @@
 * This method will be the starting point of the solution ( Prim algorithm )
 * calculate total cost of minimum spanning  tree.
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones
+* @param **readed_graph - matrix with distances from each node to its adjacent ones
 * @param number_nodes - number of nodes in graph
 * @return - returns the total cost of the minimum spanning tree
 * @date 6/1/2018
@@ -55,7 +55,7 @@ int init_read_file() {
 /**
 * This method will be used to read matrix distances from input file
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones
+* @param **readed_graph - matrix with distances from each node to its adjacent ones
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018
@@ -103,8 +103,8 @@ void Write_minimum_spanning_tree_Prim( int total_cost_tree, int number_nodes ) {
 /**
 * This method will be used to create cost matrix and spanning matrix which is needed later
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones
-* @param cost_matrix - the cost for every edge in graph(an edge with 0 distance has INF cost by convention)
+* @param **readed_graph - matrix with distances from each node to its adjacent ones
+* @param cost_matrix[][] - the cost for every edge in graph(an edge with 0 distance has INF cost by convention)
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
 * @date 6/1/2018
@@ -127,9 +127,9 @@ void create_cost_and_spanning_matrix( int **readed_graph, int cost_matrix[MAX][M
 /**
 * This method will be used to search for minimum distance from current edge to adjacent node
 * @author Stanciu Alin Marian
-* @param visited_nodes - retain for every node if was visited, 0 - not visited and 1 - was visited
-* @param distance - an array with distances: on i-th position add cost from i node to adjacent node
-* @param number_nodes - the edge with minimum cost from current node to it adjacent one
+* @param visited_nodes[] - retain for every node if was visited, 0 - not visited and 1 - was visited
+* @param distance[] - an array with distances: on i-th position add cost from i node to adjacent node
+* @param *min_distance - the edge with minimum cost from current node to it adjacent one
 * @param number_nodes - number of nodes in graph
 * @return - minimum distance
 * @date 6/1/2018
@@ -152,10 +152,10 @@ int find_adiacent_node_minim_edge( int visited_nodes[MAX], int distance[MAX], in
 /**
 * This method will be used to update distance and from arrays.
 * @author Stanciu Alin Marian
-* @param visited_nodes - retain for every node if was visited, 0 - not visited and 1 - was visited
-* @param cost_matrix - matrix with the cost for every edge in graph
-* @param distance - an array with distances: on i-th position add cost from i node to adjacent node
-* @param from - an array with adjacent nodes: on i-th position add adjacent node with i node
+* @param visited_nodes[] - retain for every node if was visited, 0 - not visited and 1 - was visited
+* @param cost_matrix[][] - matrix with the cost for every edge in graph
+* @param distance[] - an array with distances: on i-th position add cost from i node to adjacent node
+* @param from[] - an array with adjacent nodes: on i-th position add adjacent node with i node
 * @param adiacent_node - adjacent node with current node
 * @param number_nodes - number of nodes in graph
 * @return - void type and has no returned values
@@ -177,7 +177,7 @@ void update_distance_array( int visited_nodes[MAX], int cost_matrix[MAX][MAX], i
 /**
 * This method will be used to implement Prim’s algorithm
 * @author Stanciu Alin Marian
-* @param readed_graph - matrix with distances from each node to its adjacent ones
+* @param **readed_graph - matrix with distances from each node to its adjacent ones
 * @param number_nodes - number of nodes in graph
 * @return - returns minimum cost after Prim’s algorithm action
 * @date 6/1/2018

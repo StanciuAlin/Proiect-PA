@@ -11,7 +11,7 @@
 * This method is main
 * @author Stanciu Alin Marian
 * @param argc
-* @param argv
+* @param *argv[]
 * @return - returns 0
 * @date 6/1/2018
 */
