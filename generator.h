@@ -1,7 +1,7 @@
 /**
 * @file generator.h
 * @brief this header file will contain all required
-* definitions and basic utilities functions for random generator
+* definitions and basic utilities functions for random generator.
 * @author Stanciu Alin Marian
 * @date 6/1/2018
 */
