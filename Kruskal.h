@@ -1,7 +1,7 @@
 /**
 * @file Kruskal.h
 * @brief this header file will contain all required
-* definitions and basic utilities functions.
+* definitions and basic utilities functions for Kruskal algorithm.
 *
 * @author Stanciu Alin Marian
 *
@@ -10,7 +10,7 @@
 #ifndef KRUSKAL_H
 #define KRUSKAL_H
 
-#define N_MAX_VERTICES 1000
+#define N_MAX_VERTICES 100
 #define N_MAX_EDGES N_MAX_VERTICES * ( N_MAX_VERTICES - 1 ) / 2
 
 struct Edge
