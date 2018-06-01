@@ -74,6 +74,7 @@ int main(int argc, char const *argv[]) {
                     printf("5\n");
                     set_distances(readed_graph, number_nodes); ///set values for matrix distances
                     printf("6\n");
+                    get_distances(readed_graph, number_nodes);
                     total_cost = start(readed_graph, number_nodes); ///compute the minimum spanning tree cost
                     printf("7\n");
                     Write_minimum_spanning_tree_Prim(total_cost, number_nodes); ///write the minimum spanning tree
