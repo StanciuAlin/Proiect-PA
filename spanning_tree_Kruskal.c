@@ -63,7 +63,7 @@ void Read_data( int **matrix_distance, int number_nodes, int read_mode ) {
             }
         }
     }
-    //get_distances(matrix_distance, number_nodes);
+    get_distances(matrix_distance, number_nodes);
     for (iterator_i = 0; iterator_i < no_vertices_tree; iterator_i++) {
         Connected_components[iterator_i] = iterator_i;
     }

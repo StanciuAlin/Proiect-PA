@@ -8,7 +8,7 @@
 #ifndef GENERATOR_H
 #define GENERATOR_H
 #ifndef MAX_VALUE_GEN
-#define MAX_VALUE_GEN 100
+#define MAX_VALUE_GEN 1000
 #endif
 
 int generate_number( int max_value );
