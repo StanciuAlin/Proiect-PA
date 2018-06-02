@@ -42,6 +42,7 @@ int main(int argc, char const *argv[]) {
                     matrix_constructor(readed_graph, number_nodes);
                     set_distances(readed_graph, number_nodes); ///set values for matrix distances
                     start_K(readed_graph, number_nodes, 2); ///start to solve
+                    free(readed_graph);
                     printf("Open output file and read the answer of the problem with random values!\n"); ///print a message
                     break;
                 }
@@ -50,6 +51,7 @@ int main(int argc, char const *argv[]) {
                     readed_graph = (int **)calloc( number_nodes, sizeof(int *) );
                     matrix_constructor(readed_graph, number_nodes); ///allocate memory for matrix distances
                     start_K(readed_graph, number_nodes, 1); ///start to solve
+                    free(readed_graph);
                     printf("Open output file and read the answer of the problem with values from input file!\n"); ///print a message
                     break;
                 }
@@ -65,42 +67,30 @@ int main(int argc, char const *argv[]) {
             switch (read_mode_chose) {
                 case 1 : { ///random mode is selected
                     srand((unsigned)time(NULL));
-                    printf("2\n");
                     number_nodes = generate_number(MAX); ///generate number of nodes
-                    printf("3\n");
                     readed_graph = (int **)calloc( number_nodes, sizeof(int *) ); ///allocate memory for matrix distances
-                    printf("4\n");
                     matrix_constructor(readed_graph, number_nodes);
-                    printf("5\n");
                     set_distances(readed_graph, number_nodes); ///set values for matrix distances
-                    printf("6\n");
-                    get_distances(readed_graph, number_nodes);
+                    //get_distances(readed_graph, number_nodes);
                     total_cost = start(readed_graph, number_nodes); ///compute the minimum spanning tree cost
-                    printf("7\n");
                     Write_minimum_spanning_tree_Prim(total_cost, number_nodes); ///write the minimum spanning tree
-                    printf("8\n");
+                    free(readed_graph);
                     printf("Open output file and read the answer of the problem with random values!\n"); ///print a message
                     break;
                 }
                 case 2 : { ///read from file mode is selected
                     check_file = init_read_file(); ///check if input file exist
-                    printf("9\n");
                     if (check_file == -1) {
                         printf("File do not work!!!\n"); ///print an error message
                     }
-                    printf("10\n");
                     number_nodes = read_number_nodes(); ///read number of nodes
-                    printf("11\n");
                     readed_graph = (int **)calloc( number_nodes, sizeof(int *) ); ///allocate memory for matrix distances
-                    printf("12\n");
                     matrix_constructor(readed_graph, number_nodes);
-                    printf("13\n");
                     Read_data_matrix(readed_graph, number_nodes); ///read matrix distances
-                    printf("14\n");
+                    //get_distances(readed_graph, number_nodes);
                     total_cost = start(readed_graph, number_nodes); ///compute the minimum spanning tree cost
-                    printf("15\n");
                     Write_minimum_spanning_tree_Prim(total_cost, number_nodes); ///write the minimum spanning tree
-                    printf("16\n");
+                    free(readed_graph);
                     printf("Open output file and read the answer of the problem with values from input file!\n"); ///print a message
                     break;
                 }

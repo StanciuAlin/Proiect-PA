@@ -10,7 +10,7 @@
 #ifndef KRUSKAL_H
 #define KRUSKAL_H
 
-#define N_MAX_VERTICES 100
+#define N_MAX_VERTICES 1000
 #define N_MAX_EDGES N_MAX_VERTICES * ( N_MAX_VERTICES - 1 ) / 2
 
 struct Edge

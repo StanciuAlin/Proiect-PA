@@ -15,8 +15,8 @@
 int start(int **readed_graph, int number_nodes) {
 
     int total_cost; ///retain the total cost of minimum spanning tree
-    
-    total_cost=prims( readed_graph, number_nodes );
+
+    total_cost = prims( readed_graph, number_nodes );
 
     return total_cost; ///returns cost
 }
@@ -227,6 +227,8 @@ int prims( int **readed_graph, int number_nodes ) {
         update_distance_array(visited, cost, distance, from, second_adiacent_node, number_nodes);
         min_cost = min_cost + cost[first_adiacent_node][second_adiacent_node];
     }
-
+    free(visited);
+    free(distance);
+    free(from);
     return min_cost;
 }
